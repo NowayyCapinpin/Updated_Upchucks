@@ -112,6 +112,24 @@
             transition: opacity 0.5s ease-in-out;
             opacity: 1;
         }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1001; /* Ensure it's above the header */
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -121,7 +139,7 @@
         <h2>November 30, 2022</h2>
         <img src="Design2.png" alt="NOAH Logo">
     </div>
-
+<button class="login-button" onclick="location.href='login.html'">Login</button>
     <!-- Main Content -->
     <div class="main-content page-content">
         
