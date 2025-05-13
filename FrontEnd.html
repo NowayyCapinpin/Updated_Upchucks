@@ -83,7 +83,7 @@
         button {
             padding: 12px 24px;
             background: #000;
-            color: #adfd43;
+            color: #fcd225;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -112,34 +112,61 @@
             transition: opacity 0.5s ease-in-out;
             opacity: 1;
         }
-        .login-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            z-index: 1001; /* Ensure it's above the header */
-            transition: background-color 0.3s ease;
-        }
 
-        .login-button:hover {
-            background-color: #0056b3;
-        }
+        /* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Modal Input Fields */
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
     </style>
 </head>
 <body>
 
     <!-- Fixed Header -->
     <div class="header">
-        <h2>November 30, 2022</h2>
+        <h2>April 30, 2025</h2>
         <img src="Design2.png" alt="NOAH Logo">
     </div>
-<button class="login-button" onclick="location.href='login.html'">Login</button>
+
     <!-- Main Content -->
     <div class="main-content page-content">
         
@@ -156,16 +183,38 @@
         <div class="container">
             <h1>WELCOME TO NOAH</h1>
             <p>Join the growing marketplace for students!</p>
-            <button onclick="location.href='website.html'">Enter Marketplace</button>
-          
+              <button class="login-button" onclick="openModal()">Login</button>
+
+
           <script>
                 function slideToPage(url) {
                     document.body.classList.add("website.html");
                     setTimeout(() => {
                         location.href = url;
                     }, 500);
+                    
                 }
             </script>
+
+                <script>
+function openModal() {
+    document.getElementById("loginModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+// Close modal if clicked outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById("loginModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+           
         </div>
 
     </div>
@@ -173,12 +222,23 @@
      <!-- Fixed Header -->
      <div class="footer">
         <h2> Contact Us! </h2>
-        <p>NOAHMarket027@gmail.com</p>
-        <p>09225673319</p>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=NOAHMarket027@gmail.com">N.O.A.H</a></p>
+        <p>Mobile Number: 09225673319</p>
         
     </div>
+<!-- Modal Structure -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required><br><br>
+            <input type="password" placeholder="Password" required><br><br>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</div>
 
 </body>
 
 </html>
-
