@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Benedict M. Rayo - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .profile-image {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #28a745;
+    }
+
+    .header-text {
+      margin-left: 25px;
+      flex: 1;
+    }
+
+    .name {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #28a745;
+      border-left: 5px solid #28a745;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      background: #e9f5ec;
+      color: #28a745;
+      padding: 10px 15px;
+      margin: 5px 10px 5px 0;
+      border-radius: 8px;
+      font-size: 0.95em;
+    }
+
+    .education-item,
+    .credentials-item {
+      margin-bottom: 20px;
+    }
+
+    .education-item h3,
+    .credentials-item h3 {
+      margin-bottom: 5px;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .education-item p,
+    .credentials-item p,
+    .credentials-item ul {
+      margin: 0;
+      color: #555;
+    }
+
+    .credentials-item ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .credentials-item a {
+      color: #28a745;
+      text-decoration: none;
+    }
+
+    .credentials-item a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      border-top: 2px solid #e0e0e0;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 0.95em;
+      color: #999;
+    }
+
+    .social-media {
+      margin: 15px 0;
+    }
+
+    .social-media a {
+      margin: 0 10px;
+      color: #28a745;
+      text-decoration: none;
+      font-size: 1.5em; /* Adjust the icon size */
+      transition: color 0.3s ease;
+    }
+
+    .social-media a:hover {
+      color: #222;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-text {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="jbrayo.jpg" alt="Profile Picture" class="profile-image">
+      <div class="header-text">
+        <div class="name">John Benedict M. Rayo</div>
+        <div class="contact-info">
+          <p>Email: johnbenedictrayo@gmail.com</p>
+          <p>Phone: (63+) 926-072-9401</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Profile</div>
+      <p>I am John Benedict M. Rayo, a 2nd-year Computer Engineering student at the Technological Institute of the Philippines - Manila (TIP). I am passionate about technology and continuously developing my skills in programming, hardware design, and problem-solving. Eager to apply my knowledge in real-world settings, I am seeking opportunities to gain hands-on experience and contribute to innovative projects. A fast learner with a strong work ethic, I am committed to growing as a future engineer in the tech industry, especially in hardware.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <ul class="skills-list">
+        <li>Programming: C++ & Python</li>
+        <li>Microcontroller Programming (Arduino)</li>
+        <li>Digital & Analog Circuit Design</li>
+        <li>Computer Hardware Repair</li>
+        <li>PCB Design</li>
+        <li>Networking Fundamentals (TCP/IP, LAN/WAN)</li>
+        <li>AutoCAD</li>
+        <li>MATLAB</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="education-item">
+        <h3>Colegio de Sta. Monica de Angat</h3>
+        <p><em>2009–2011</em></p>
+        <p>Kinder – Elementary (1st Grade)</p>
+      </div>
+      <div class="education-item">
+        <h3>University of the East - Manila</h3>
+        <p><em>2011–2023</em></p>
+        <p>Elementary (2nd–6th), Junior HS (7th–10th), Senior HS (11th–12th)</p>
+      </div>
+      <div class="education-item">
+        <h3>Technological Institute of the Philippines - Manila</h3>
+        <p><em>2023–Present</em></p>
+        <p>1st Year – 2nd Year, Ongoing</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Credentials</div>
+      <div class="credentials-item">
+        <h3>HackTheBox Badges:</h3>
+        <ul>
+          <li><a href="https://academy.hackthebox.com/achievement/badge/7bcacbb3-f38e-11ef-864f-bea50ffe6cb4" target="_blank">Intro to Academy</a></li>
+          <li><a href="https://academy.hackthebox.com/achievement/badge/b9d5ec99-f8ef-11ef-864f-bea50ffe6cb4" target="_blank">Linux Fundamentals</a></li>
+          <li><a href="https://academy.hackthebox.com/achievement/badge/ffec020d-f517-11ef-864f-bea50ffe6cb4" target="_blank">Windows Fundamentals</a></li>
+          <li><a href="https://academy.hackthebox.com/achievement/badge/12bdf0d5-03ef-11f0-864f-bea50ffe6cb4" target="_blank">Windows Command Line</a></li>
+          <li><a href="https://academy.hackthebox.com/achievement/badge/19da919e-f38f-11ef-864f-bea50ffe6cb4" target="_blank">Intro to InfoSec</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="social-media">
+        <a href="https://www.facebook.com/yourusername" target="_blank" title="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/yourusername" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://t.me/yourusername" target="_blank" title="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://discord.com/users/yourusername" target="_blank" title="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://www.tiktok.com/@yourusername" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+      <p>© 2025 John Benedict M. Rayo — All Rights Reserved</p>
+    </div>
+  </div>
+</body>
+</html>
+
