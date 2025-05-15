@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('forest.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #180707;
+            text-align: center;
+        }
+
+        header {
+            background: #cf4242;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .main-layout {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap; /* mobile responsiveness */
+}
+
+        .description-box {
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #180707;
+            text-align: left;
+}
+        .outer-frame {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 100px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Image Styling */
+        .profile-img {
+            width: 150px;
+            border-box: 50%;
+            margin-top: 20px;
+
+
+        }
+        .h2-gif {
+            width: 90px;
+            height: 90px;
+            vertical-align: center;
+            margin-left: 340px;
+}
+
+        .profile-img::before {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0.2) 100%),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0.2) 100%);
+            background-size: 1px 100%, 100% 1px; /* Creates the vertical and horizontal lines */
+        }
+
+        .profile-img::after {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 49.5%, rgba(0, 0, 0, 0.2) 50.5%, rgba(0, 0, 0, 0) 51%),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0) 49.5%, rgba(0, 0, 0, 0.2) 50.5%, rgba(0, 0, 0, 0) 51%);
+            background-size: 100% 1px, 1px 100%; /* Creates the center lines */
+        }
+
+/* Optional: Add a border for a cleaner look */
+        .profile-img {
+            border: 4px solid rgb(231, 7, 7);
+            box-sizing: border-box; /* Include border in width/height */
+        }
+        h1 {
+            margin-top: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .content-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Grid for images inside sections */
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+
+    </style>
+</head>
+<body>
+    <header>𝕄𝕪 𝕡𝕠𝕣𝕥𝕗𝕠𝕝𝕚𝕠</header>
+    <div class="container">
+        <img src="glass2.jpg" alt="Profile Picture" class="profile-img">
+
+        <h1>NOAH CAPINPIN</h1>
+        <p>Web Developer | Designer | Freelancer</p>
+        <p></p>
+        <div class="buttons">
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('hobbies')">Hobbies</button>
+            <button onclick="showSection('talents')">Talents</button>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="content-box hidden">
+            <h2>Skills</h2>
+            <p>HTML, CSS </p>
+            <div class="image-grid">
+                <img src="html.webp" alt="HTML">
+                <img src="css.webp" alt="CSS">
+               
+            </div>
+        </div>
+        <div class="main-layout">
+            <!-- Left Column: Existing container -->
+            <div class="container">
+                <!-- existing content here -->
+            </div>
+        
+            <!-- Right Column: Description box -->
+            <div class="description-box">
+                <h2>
+                    <img src="hello.gif" alt="Sparkle" class="h2-gif">
+                </h2>
+                
+                <p>
+                    I'm Noah Capinpin, a passionate web developer with a knack for design and clean code.
+                    I love turning ideas into reality through web technologies and continuously learning new things.
+                </p>
+            </div>
+        </div>
+        <div class="outer-frame">
+            <div class="container">
+                <!-- All your current content goes here -->
+            </div>
+        </div>
+        
+        <!-- Hobbies Section -->
+        <div id="hobbies" class="content-box hidden">
+            <h2>Hobbies</h2>
+            <p>Playing guitar, Reading, Gaming, Nature, Cooking</p>
+            <div class="image-grid">
+                <img src="playing guitar.jpg" alt="Playing Guitar">
+                <img src="Reading.png" alt="Reading">
+                <img src="gaming.jpg" alt="Gaming">
+                <img src="nature.jpg" alt="Nature">
+                <img src="cooking.jpg" alt="Cooking">
+            </div>
+        </div>
+
+        
+        
+        <div id="talents" class="content-box hidden">
+            <h2>Talents</h2>
+            <p>Playing Piano,Singing,Drawing</p>
+            <div class="image-grid">
+                <img src="Playing Piano.webp" alt="Playing Piano">
+                <img src="Singing.png" alt="Singing">
+                <img src="Drawing.png" alt="Painting">
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <p>Email: your.email@example.com</p>
+            <button>Contact Now</button>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById("skills").classList.add("hidden");
+            document.getElementById("hobbies").classList.add("hidden");
+            document.getElementById("talents").classList.add("hidden");
+
+            document.getElementById(sectionId).classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

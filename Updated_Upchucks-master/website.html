@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME - to Niche Object Affiliate & Handling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="Design2.png" alt="https://images.app.goo.gl/1PtxPsZdndu3e8n88">
+        <img class="logo2" src="TIPLOGO.webp" alt="https://logodix.com/logo/1807102.jpg">
+        <h1>𝕎𝔼𝕃ℂ𝕆𝕄𝔼!</h1>
+        <p>to Niche Object Affiliate & Handling, where students can buy and sell a variety of products and services, in associate with the Technological Institute of The Philippines</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#sell">Sell</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <p>Buy and sell niche products with ease!</p>
+    </section>
+
+    <section id="products">
+        <h2>Products</h2>
+        <input type="text" id="search-bar" placeholder="Search for products..." onkeyup="searchProducts()">
+        <div id="product-list">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Price: ₱20</p>
+                <button onclick="addToCart('Product 1', 20)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Price: ₱30</p>
+                <button onclick="addToCart('Product 2', 30)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sell">
+        <h2>Sell Your Product</h2>
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('add-product')">Add Product</button>
+            <button class="tab" onclick="showTab('user-listings')">Your Listings</button>
+        </div>
+
+        <div id="add-product" class="tab-content">
+            <input type="text" id="sell-name" placeholder="Product Name (Max 40 chars)" maxlength="40">
+            <input type="number" id="sell-price" placeholder="Price (Max ₱999999)" min="0">
+            <input type="file" id="sell-image" accept="image/*">
+            <button onclick="addProduct()">List Product</button>
+        </div>
+
+        <div id="user-listings" class="tab-content hidden">
+            <h3>Your Listed Products</h3>
+            <div id="user-products"></div>
+        </div>
+    </section>
+    <div id="loader"></div>
+
+    <style>
+        /* Full-screen loading effect */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+    
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById("loader").style.opacity = "0";
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+            }, 1500);
+        };
+    </script>
+    
+    
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div class="cart-container">
+            <div id="cart-items"></div> 
+        </div>
+        <p>Total: ₱<span id="total">0</span></p>
+    </section>
+
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <p>Review your cart and enter your details.</p>
+        <form id="checkout-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="address" placeholder="Shipping Address" required>
+            <p>Total: ₱<span id="checkout-total">0</span></p>
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=Noahcapinpin7@gmail.com">N.O.A.H</a></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

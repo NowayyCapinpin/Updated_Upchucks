@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to NOAH</title>
+    <link rel="icon" href="Design2.png" type="image/x-icon">
+    <style>
+        /* Style.CSS*/
+        body {
+            font-family: Arial, sans-serif;
+            background: url('lightbulb.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #1a0a0a;
+            text-align: center;
+        }
+
+        /* Fixed Header */
+        .header {
+            background: rgba(23, 29, 32, 0.9);
+            color: rgb(252, 252, 252);
+            padding: 10px 0; 
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Date Styling */
+        .header h2 {
+            margin: 5px 0;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Logo */
+        .header img {
+            width: 250px; 
+            height: auto;
+            margin-top: 5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 10px; /* Prevents content from being hidden by the fixed header */
+        }
+
+        /* Description Section */
+        .description {
+            background: rgba(255, 255, 255, 0.9);
+            letter-spacing: 1px;
+            line-height: 1.4; 
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 60px;
+        }
+
+        /* Container */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(20, 7, 7, 0.2);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Button */
+        button {
+            padding: 12px 24px;
+            background: #000;
+            color: #fcd225;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+
+        button:hover {
+            background: #444;
+        }
+
+        /* Fade-in effect */
+        .page-content {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <div class="header">
+        <h2>April 30, 2025</h2>
+        <img src="Design2.png" alt="NOAH Logo">
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content page-content">
+        
+        <!-- Description Box -->
+        <div class="description">
+            <h2>NOAH (Niche Object Affiliate & Handling)</h2>
+            <p>It is an innovative online marketplace designed exclusively for students of the Technological Institute of the Philippines (T.I.P.). </p>
+            <img class="logo2" src="TIPLOGO.webp" alt="TIP Logo" width="200">
+            <p>Our platform enables students to buy and sell used books, school materials, and essential academic resources within the school community. </p>
+            <p>Whether you're looking to pass on your old textbooks, find affordable supplies, or connect with fellow students for academic needs, NOAH is the perfect place for you!</p>
+        </div>
+
+        <!-- Interactive Section -->
+        <div class="container">
+            <h1>WELCOME TO NOAH</h1>
+            <p>Join the growing marketplace for students!</p>
+            <button onclick="location.href='signin.html'">Sign In/Create an account</button>
+
+          <script>
+                function slideToPage(url) {
+                    document.body.classList.add("website.html");
+                    setTimeout(() => {
+                        location.href = url;
+                    }, 500);
+                }
+            </script>
+        </div>
+
+    </div>
+
+     <!-- Fixed Header -->
+     <div class="footer">
+        <h2> Contact Us! </h2>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=NOAHMarket027@gmail.com">N.O.A.H</a></p>
+        <p>Mobile Number: 09225673319</p>
+        
+    </div>
+
+</body>
+
+</html>
+
+
